@@ -1,4 +1,4 @@
-from ..sort import *
+from ..src.sort import *
 
 # import random
 
