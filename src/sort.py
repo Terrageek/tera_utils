@@ -68,6 +68,7 @@ if __name__ == "__main__":
     from colorama import Fore
 
     arr = make_list(100, int)
+    orr_arr = arr.copy()
 
     # * Original list
     print(Fore.GREEN + f"\nOriginal array:" + Fore.WHITE)
@@ -75,6 +76,7 @@ if __name__ == "__main__":
 
     # * Bubble sort
     print(Fore.GREEN + f"\nBubble sort:" + Fore.WHITE)
+    arr = orr_arr.copy()
     start = time.time()
     bubble_sort(arr)
     end = time.time()
@@ -85,8 +87,20 @@ if __name__ == "__main__":
 
     # * Merge sort
     print(Fore.GREEN + f"\nMerge sort:" + Fore.WHITE)
+    arr = orr_arr.copy()
     start = time.time()
     merge_sort(arr)
+    end = time.time()
+    if len(arr) < 101:
+        print(arr)
+    speed = end - start
+    print(Fore.RED + f"{speed} seconds, length: {len(arr)}\n" + Fore.WHITE)
+
+    # * Built-in sort
+    print(Fore.GREEN + f"\nBuilt-in sort:" + Fore.WHITE)
+    arr = orr_arr.copy()
+    start = time.time()
+    arr.sort()
     end = time.time()
     if len(arr) < 101:
         print(arr)
