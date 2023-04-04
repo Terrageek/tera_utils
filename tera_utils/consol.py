@@ -1,7 +1,7 @@
 import json, math
 
 
-with open("resources/ascii_chars.json", "r") as t:
+with open("tera_utils/resources/ascii_chars.json", "r") as t:
     default_chars = json.loads(t.read())
 
 
