@@ -3,10 +3,10 @@ __pycache__/
 .pytest_cache/
 
 
-
-
 main.py
 code.txt
 
-dist
-build
+
+build/
+tera_utils.egg-info/
+dist/

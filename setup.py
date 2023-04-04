@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 VERSION = "0.0.1"
 DESCRIPTION = "Utils for fun"
-LONG_DESCRIPTION = "I package made for fun and education"
+LONG_DESCRIPTION = "A package made for fun and education"
 
 # Setting up
 setup(
