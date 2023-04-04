@@ -4,6 +4,7 @@ setup.py
 tera_utils/__init__.py
 tera_utils/consol.py
 tera_utils/date.py
+tera_utils/locals.py
 tera_utils/search.py
 tera_utils/sort.py
 tera_utils/terminal.py

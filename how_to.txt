@@ -1,0 +1,13 @@
+# Build package
+
+python setup.py sdist bdist_wheel
+
+
+
+# Publish / Update package
+
+pip install twine
+
+# DELETE OLD tera_utils-<version>... File or twine will error
+
+twine upload dist/*

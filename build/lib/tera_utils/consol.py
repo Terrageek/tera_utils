@@ -1,8 +1,5 @@
-import json, math
-
-
-with open("tera_utils/resources/ascii_chars.json", "r") as t:
-    default_chars = json.loads(t.read())
+import math
+from .locals import ascii_chars as default_chars
 
 
 class Consol:

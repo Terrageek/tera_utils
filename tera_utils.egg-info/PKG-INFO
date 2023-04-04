@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: tera-utils
-Version: 0.0.1
+Version: 0.0.2
 Summary: Utils for fun
 Author: TeraGeek
 Keywords: python
@@ -13,4 +13,4 @@ Classifier: Operating System :: Microsoft :: Windows
 Description-Content-Type: text/markdown
 License-File: LICENSE.md
 
-I package made for fun and education
+A package made for fun and education
