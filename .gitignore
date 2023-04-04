@@ -1,5 +1,11 @@
-tests/__pycache__/
 __pycache__/
 .vscode/
 .pytest_cache/
+
+
+build/
+dist/
+
+
+
 main.py
