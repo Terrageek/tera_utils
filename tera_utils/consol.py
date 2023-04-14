@@ -2,7 +2,7 @@ import math
 from .locals import ascii_chars as default_chars
 
 
-class Consol:
+class Ascii_text:
     def __init__(
         self,
         consol_width: int = 18,
@@ -19,14 +19,25 @@ class Consol:
         # Debug settings
         self.debug_mode = False
 
+    def split_text_into_lines(self, text: str, max_width: int) -> list:
+        """Creates a list with the same amount of elements as lines needed to print text.
+
+        Args:
+            text (str): The text you want to print
+            max_width (int): The amount of characters allowed in one line
+
+        Returns:
+            list: a list with the same amount of elements inside that are needed to print a line without warping.
+        """
+        return list(range(math.ceil(len(text) / self.consol_width)))
+    
+
     def render(self, text: str):
         """Turns 'text' into a consol.print()-able list"""
 
-        new_line_idx = list(range(math.ceil(len(text) / self.consol_width)))
-
         self.lines = []
 
-        for line_idx in new_line_idx:
+        for line_idx in self.split_text_into_lines(text, self.consol_width):
             txt_len = len(text)
             chars_to_print = line_idx * self.consol_width
 
@@ -94,5 +105,5 @@ if __name__ == "__main__":
 
     chars_per_line = tw // 8
 
-    consol = Consol(chars_per_line, 7, 8)
+    consol = Ascii_text(chars_per_line, 7, 8)
     consol.render("Hello World! This is my own text to ASCII renderer, 0123456789")
